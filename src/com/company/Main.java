@@ -106,6 +106,8 @@ public class Main {
                     familiars.loadFile(reserveCopyFile);
                     break;
                 case 9:
+                    String saveReserveCopyFile = "reserve.txt";
+                    familiars.saveFile(saveReserveCopyFile);
                     break;
             }
             number = taskNumber;
