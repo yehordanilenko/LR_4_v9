@@ -1,0 +1,35 @@
+1
+Petrov Ivan Ivanovich
+2003
+12
+12
+Balkovskaya 9, apart 15
++380500419660
+2
+Andreev Alexandr Sergeevich
+2001
+10
+2
+Serova 13, apart 5
++380668726372
+3
+Fedorov Andrey Igorevich
+2000
+1
+23
+Morozova 1, apart 23
+no phone
+4
+Petrov Sasha Petrovich
+1994
+1
+1
+Petrova 19
++380662207300
+5
+pertob o b
+2000
+12
+12
+fw
+no phone
