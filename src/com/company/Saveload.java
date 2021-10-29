@@ -1,11 +1,9 @@
 package com.company;
 
 import java.io.*;
-import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Saveload {
     private static FileOutputStream outFile;
@@ -60,28 +58,8 @@ public class Saveload {
                 outFile.close();
             }
 
-                /*bw.write(String.valueOf(object.getSerialNumber()));
-                bw.write(System.lineSeparator());
-                bw.write(object.getFIO());
-                bw.write(System.lineSeparator());
-                bw.write(String.valueOf(object.getYear()));
-                bw.write(System.lineSeparator());
-                bw.write(String.valueOf(object.getMonth()));
-                bw.write(System.lineSeparator());
-                bw.write(String.valueOf(object.getDay()));
-                bw.write(System.lineSeparator());
-                bw.write(object.getAddress());
-                bw.write(System.lineSeparator());
-                bw.write(object.getNumberPhone());
-                bw.write(System.lineSeparator());*/
         }
 
-    }
-    int fromByteArray(byte[] bytes) {
-        return ((bytes[0] & 0xFF) << 24) |
-                ((bytes[1] & 0xFF) << 16) |
-                ((bytes[2] & 0xFF) << 8 ) |
-                ((bytes[3] & 0xFF));
     }
 
     public void load(ArrayList<Familiar> familiars , String fileWay) throws IOException {
@@ -122,7 +100,6 @@ public class Saveload {
         int q = 0;
         for (int i = 0; i < amount; i++) {
 
-            int c=0;
             for (i = q; i < amount; i++) {
                 if (dannie[i] == 46) {
                     q = i+1;
@@ -133,9 +110,7 @@ public class Saveload {
                 String str = new String(ab, "UTF-8");
                 num = num + str;
                 serialNumber = Integer.parseInt(num, 2);
-                c+=1;
             }
-            c=0;
 
             for (i = q; i < amount; i++) {
                 if (dannie[i] == 46) {
@@ -146,7 +121,6 @@ public class Saveload {
                 ab[0] = dannie[i];
                 String str = new String(ab, "UTF-8");
                 FIO = FIO + str;
-
             }
             for (i = q; i < amount; i++) {
                 if (dannie[i] == 46) {
@@ -158,9 +132,7 @@ public class Saveload {
                 String str = new String(ab, "UTF-8");
                 y1 = y1 + str;
                 year = Integer.parseInt(y1, 2);
-                c+=1;
             }
-            c=0;
             for (i = q; i < amount; i++) {
                 if (dannie[i] == 46) {
                     q = i+1;
@@ -171,9 +143,8 @@ public class Saveload {
                 String str = new String(ab, "UTF-8");
                 m1 = m1 + str;
                 month = Integer.parseInt(m1, 2);
-                c+=1;
             }
-            c=0;for (i = q; i < amount; i++) {
+            for (i = q; i < amount; i++) {
                 if (dannie[i] == 46) {
                     q = i+1;
                     break;
@@ -183,7 +154,6 @@ public class Saveload {
                 String str = new String(ab, "UTF-8");
                 d1 = d1 + str;
                 day = Integer.parseInt(d1, 2);
-                c+=1;
             }
 
             for (i = q; i < amount; i++) {
