@@ -37,7 +37,7 @@ public class Familiars {
     }
 
     void existPhone() {
-        Scanner scan = new Scanner(System.in);
+        //Scanner scan = new Scanner(System.in);
         System.out.println("Знакомые, имеющие телефон: ");
         for (Familiar object : familiars) {
             if(object.numberPhone != null){
@@ -75,12 +75,12 @@ public class Familiars {
         }
     }
     void saveFile(String fileWay) throws IOException {
-        Save saveBase = new Save();
+        Saveload saveBase = new Saveload();
         saveBase.save(familiars,fileWay);
     }
 
     void loadFile(String fileWay) throws IOException {
-        Load loadBase = new Load();
+        Saveload loadBase = new Saveload();
         loadBase.load(familiars , fileWay);
     }
 

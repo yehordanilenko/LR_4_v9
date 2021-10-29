@@ -54,6 +54,7 @@ public class Main {
                 case 4:
                     System.out.println(familiars);
                     int newNumber;
+
                     do {
                         System.out.println("Введите номер, после которого хотели бы добавить нового знакомого");
                         newNumber = scan.nextInt();
@@ -101,12 +102,11 @@ public class Main {
                     System.out.println("Файл успешно загружен!");
                     break;
                 case 8:
-                    String reserveCopyFile = "reserve.txt";
-                    familiars.saveFile(reserveCopyFile);
+                    String reserveCopyFile = "reserve.bin";
                     familiars.loadFile(reserveCopyFile);
                     break;
                 case 9:
-                    String saveReserveCopyFile = "reserve.txt";
+                    String saveReserveCopyFile = "reserve.bin";
                     familiars.saveFile(saveReserveCopyFile);
                     break;
             }
